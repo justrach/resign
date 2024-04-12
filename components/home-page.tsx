@@ -106,24 +106,6 @@ export function HomePage() {
         />
       </PopoverContent>
     </Popover> </div>
-
-    {/* <div className="space-y-2 w-full md:w-1/3"> */}
-            {/* <Label htmlFor="company">Company</Label>
-            <Command className="rounded-lg border shadow-md w-full">
-              <CommandInput placeholder="Select a company..." onChange={(e) => setCompany(e.target.value)} value={company} />
-              <CommandList> */}
-                {/* Hardcoded company list, replace or modify as necessary */}
-                {/* {["Google", "Microsoft", "Apple", "Facebook", "Amazon", "IBM", "Intel", "Oracle", "SAP", "Salesforce"].map((item) => (
-                  <CommandItem key={item} onClick={() => setCompany(item)}>
-                    <span>{item}</span>
-                  </CommandItem>
-                ))} */}
-              {/* </CommandList> */}
-            {/* </Command> */}
-          {/* </div>  */}
-          
-
-
           <div className="space-y-2 w-full md:w-1/2">
             <Label htmlFor="reason">Reason for Resignation</Label>
             <Textarea id="reason" className="min-h-[150px]" placeholder="Enter your reason for resignation" value={input} onChange={handleInputChange} />
@@ -154,7 +136,6 @@ export function HomePage() {
 
         {!isLoading && (
   <div>
-    {/* <div className="bg-gray-100 rounded-lg shadow px-5 py-4"> */}
   <Card className="">
     <div className="p-8">
     <Test content={completion} />
@@ -162,8 +143,7 @@ export function HomePage() {
 
   
   </Card> 
-    {/* <Test content={completion} /> */}
-    {/* </div> */}
+
   </div>
 )}
       </motion.div>
