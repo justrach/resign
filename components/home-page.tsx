@@ -47,6 +47,7 @@ export function HomePage() {
       employeeName: employeeName,
       date: date,
       reason: reason,
+      company: company
     }
   });
 
@@ -76,15 +77,19 @@ export function HomePage() {
           <Label htmlFor="employee-name">Employee Name</Label>
           <Input id="employee-name" placeholder="Enter your name" value={employeeName} onChange={(e) => setEmployeeName(e.target.value)} />
         </div>
+        <div className="space-y-2">
+          <Label htmlFor="employee-name">Company Name</Label>
+          <Input id="employee-name" placeholder="What company you quittin" value={company} onChange={(e) => setCompany(e.target.value)} />
+        </div>
         <div className="flex flex-col md:flex-row justify-between space-y-4 md:space-y-0 md:space-x-4">
   <div className="space-y-2 w-full md:w-1/3">
     <Label htmlFor="date">Date</Label>
           <Popover>
       <PopoverTrigger asChild>
         <Button
-          variant={"outline"}
+          // variant={"outline"}
           className={cn(
-            "w-[240px] justify-start text-left font-normal",
+            "w-[240px] justify-start text-left font-normal ",
             !date && "text-muted-foreground"
           )}
         >
@@ -124,9 +129,11 @@ export function HomePage() {
             <Textarea id="reason" className="min-h-[150px]" placeholder="Enter your reason for resignation" value={input} onChange={handleInputChange} />
           </div>
         </div>
+
+   
       
 <div className="flex justify-center w-full">
-  <Button type="submit" className="w-full" disabled={isLoading}>Generate</Button>
+  <Button type="submit" className="w-full bg-[#87CEEB] text-white" disabled={isLoading}>Generate</Button>
 </div>
       </motion.form>
       <motion.div
@@ -136,7 +143,7 @@ export function HomePage() {
         className="mt-6 w-full max-w-xl"
       >
    {isLoading && (
-    <Card>
+ <Card className="">
   <div className=" px-5 py-4">
     <div
       className="htmlContent"
@@ -148,7 +155,7 @@ export function HomePage() {
         {!isLoading && (
   <div>
     {/* <div className="bg-gray-100 rounded-lg shadow px-5 py-4"> */}
-  <Card>
+  <Card className="">
     <div className="p-8">
     <Test content={completion} />
     </div>
