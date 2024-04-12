@@ -102,20 +102,21 @@ export function HomePage() {
       </PopoverContent>
     </Popover> </div>
 
-    <div className="space-y-2 w-full md:w-1/3">
-            <Label htmlFor="company">Company</Label>
+    {/* <div className="space-y-2 w-full md:w-1/3"> */}
+            {/* <Label htmlFor="company">Company</Label>
             <Command className="rounded-lg border shadow-md w-full">
               <CommandInput placeholder="Select a company..." onChange={(e) => setCompany(e.target.value)} value={company} />
-              <CommandList>
+              <CommandList> */}
                 {/* Hardcoded company list, replace or modify as necessary */}
-                {["Google", "Microsoft", "Apple", "Facebook", "Amazon", "IBM", "Intel", "Oracle", "SAP", "Salesforce"].map((item) => (
+                {/* {["Google", "Microsoft", "Apple", "Facebook", "Amazon", "IBM", "Intel", "Oracle", "SAP", "Salesforce"].map((item) => (
                   <CommandItem key={item} onClick={() => setCompany(item)}>
                     <span>{item}</span>
                   </CommandItem>
-                ))}
-              </CommandList>
-            </Command>
-          </div>
+                ))} */}
+              {/* </CommandList> */}
+            {/* </Command> */}
+          {/* </div>  */}
+          
 
 
           <div className="space-y-2 w-full md:w-1/2">

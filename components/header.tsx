@@ -3,11 +3,11 @@ export default function Header() {
   return (
     <header className="flex bg-white justify-between items-center w-full border-b-2 pb-7 sm:px-4 px-2">
       <Link href="/" className="flex space-x-3">
-        <img
+        {/* <img
           alt="header text"
           src="/write.svg"
           className="sm:w-9 sm:h-9 w-8 h-8"
-        />
+        /> */}
         <h1 className="sm:text-3xl text-2xl font-bold ml-2 tracking-tight">
          resign.lol
         </h1>

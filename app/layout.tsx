@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { Libre_Franklin } from 'next/font/google'
+import { Rye } from 'next/font/google'
 import { ScreenSize } from "@/components/screen";
 
 
 
-const libre = Libre_Franklin({
+const libre = Rye({
+  weight: '400',
   subsets: ['latin'],
   display: 'swap',
 })

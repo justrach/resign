@@ -8,8 +8,8 @@ const config: Config = {
   ],
   theme: {
     colors: {
-      bg: '#fcfcca',
-      main: '#87CEEB',
+      bg: '#FEF2E8',
+      main: '#FFDC58',
     },
     borderRadius: {
       base: '4px'
