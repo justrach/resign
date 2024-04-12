@@ -78,8 +78,8 @@ export function HomePage() {
           <Input id="employee-name" placeholder="Enter your name" value={employeeName} onChange={(e) => setEmployeeName(e.target.value)} />
         </div>
         <div className="space-y-2">
-          <Label htmlFor="employee-name">Company Name</Label>
-          <Input id="employee-name" placeholder="What company you quittin" value={company} onChange={(e) => setCompany(e.target.value)} />
+          <Label htmlFor="company-name">Company Name</Label>
+          <Input id="company-name" placeholder="What company you quittin" value={company} onChange={(e) => setCompany(e.target.value)} />
         </div>
         <div className="flex flex-col md:flex-row justify-between space-y-4 md:space-y-0 md:space-x-4">
   <div className="space-y-2 w-full md:w-1/3">
