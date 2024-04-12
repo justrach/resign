@@ -16,7 +16,7 @@ export default function Completion() {
   } = useCompletion({
     api: '/api/completion',
     body:{
-      employeeName: employeeName
+      employeeName: employeeName,
     }
   });
   return (
