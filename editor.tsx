@@ -5,7 +5,10 @@ import "@blocknote/react/style.css";
 import { useEffect } from "react";
  
 // Our <Editor> component we can reuse later
-export default function Editor({content}: {content: string}) {
+// export default function Editor({content}: {content: string}) {
+
+
+export default function Editor() {
   // Creates a new editor instance.
   const editor = useCreateBlockNote();
  

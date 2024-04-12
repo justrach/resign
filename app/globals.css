@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
+.container {
+  display: flex;
+  flex-direction: row; /* or column, depending on desired layout */
+  justify-content: space-between;
+  align-items: stretch; /* Ensures items fill the container */
+}
+
+.content, .editor {
+  flex: 1; /* Allows both items to grow equally */
+  margin: 10px; /* Optional, for spacing */
+}
+
+.editor {
+  min-width: 300px;
+  max-width: 600px;
+  width: 50%; /* Adjust based on your layout preference */
+}
