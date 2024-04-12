@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { Libre_Franklin } from 'next/font/google'
+import { Rye } from 'next/font/google'
 import { ScreenSize } from "@/components/screen";
 
 
 
-const libre = Libre_Franklin({
+const libre = Rye({
+  weight: '400',
   subsets: ['latin'],
   display: 'swap',
 })
@@ -14,10 +15,10 @@ const libre = Libre_Franklin({
 const inter = Inter({ subsets: ["latin"] });
 
 let title = 'Write your resignation letters fast';
-let description = 'Get insights on your PDFs, reduce your workload, and get more done!';
-let ogimage = 'https://rachit.ai/bot-icon.png';
-let url = 'https://rachit.ai';
-let sitename = 'rachit.ai';
+let description = 'Create resignation letters with AI 🤖';
+let ogimage = 'https://resign.lol/resign.png';
+let url = 'https://resign.lol';
+let sitename = 'resign.lol';
 // lamo this is stupid
 export const metadata: Metadata = {
    keywords :[
@@ -82,8 +83,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={libre.className+"bg-white"}>
-        <ScreenSize />
+      <body className={libre.className}>
+        {/* <ScreenSize /> */}
         {children}</body>
     </html>
   );

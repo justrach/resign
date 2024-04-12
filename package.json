@@ -19,6 +19,8 @@
     "@tiptap/extension-text-style": "^2.3.0",
     "@tiptap/react": "^2.3.0",
     "@tiptap/starter-kit": "^2.3.0",
+    "@upstash/ratelimit": "^1.0.3",
+    "@vercel/kv": "^1.0.1",
     "ai": "^3.0.21",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",

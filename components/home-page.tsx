@@ -47,6 +47,7 @@ export function HomePage() {
       employeeName: employeeName,
       date: date,
       reason: reason,
+      company: company
     }
   });
 
@@ -76,23 +77,27 @@ export function HomePage() {
           <Label htmlFor="employee-name">Employee Name</Label>
           <Input id="employee-name" placeholder="Enter your name" value={employeeName} onChange={(e) => setEmployeeName(e.target.value)} />
         </div>
+        <div className="space-y-2">
+          <Label htmlFor="company-name">Company Name</Label>
+          <Input id="company-name" placeholder="What company you quittin" value={company} onChange={(e) => setCompany(e.target.value)} />
+        </div>
         <div className="flex flex-col md:flex-row justify-between space-y-4 md:space-y-0 md:space-x-4">
   <div className="space-y-2 w-full md:w-1/3">
     <Label htmlFor="date">Date</Label>
-    <Popover>
+          <Popover>
       <PopoverTrigger asChild>
         <Button
-          variant="noShadow"
+          // variant={"outline"}
           className={cn(
-            'w-[280px] justify-start text-left font-bold',
-            !date && 'text-muted-foreground',
+            "w-[240px] justify-start text-left font-normal ",
+            !date && "text-muted-foreground"
           )}
         >
           <CalendarIcon className="mr-2 h-4 w-4" />
-          {date ? format(date, 'PPP') : <span>Pick a date</span>}
+          {date ? format(date, "PPP") : <span>Resignation Date</span>}
         </Button>
       </PopoverTrigger>
-      <PopoverContent className="w-auto !border-0 p-0">
+      <PopoverContent className="w-auto p-0" align="start">
         <Calendar
           mode="single"
           selected={date}
@@ -102,20 +107,21 @@ export function HomePage() {
       </PopoverContent>
     </Popover> </div>
 
-    <div className="space-y-2 w-full md:w-1/3">
-            <Label htmlFor="company">Company</Label>
+    {/* <div className="space-y-2 w-full md:w-1/3"> */}
+            {/* <Label htmlFor="company">Company</Label>
             <Command className="rounded-lg border shadow-md w-full">
               <CommandInput placeholder="Select a company..." onChange={(e) => setCompany(e.target.value)} value={company} />
-              <CommandList>
+              <CommandList> */}
                 {/* Hardcoded company list, replace or modify as necessary */}
-                {["Google", "Microsoft", "Apple", "Facebook", "Amazon", "IBM", "Intel", "Oracle", "SAP", "Salesforce"].map((item) => (
+                {/* {["Google", "Microsoft", "Apple", "Facebook", "Amazon", "IBM", "Intel", "Oracle", "SAP", "Salesforce"].map((item) => (
                   <CommandItem key={item} onClick={() => setCompany(item)}>
                     <span>{item}</span>
                   </CommandItem>
-                ))}
-              </CommandList>
-            </Command>
-          </div>
+                ))} */}
+              {/* </CommandList> */}
+            {/* </Command> */}
+          {/* </div>  */}
+          
 
 
           <div className="space-y-2 w-full md:w-1/2">
@@ -123,9 +129,11 @@ export function HomePage() {
             <Textarea id="reason" className="min-h-[150px]" placeholder="Enter your reason for resignation" value={input} onChange={handleInputChange} />
           </div>
         </div>
+
+   
       
 <div className="flex justify-center w-full">
-  <Button type="submit" className="w-full" disabled={isLoading}>Generate</Button>
+  <Button type="submit" className="w-full bg-[#87CEEB] text-white" disabled={isLoading}>Generate</Button>
 </div>
       </motion.form>
       <motion.div
@@ -135,7 +143,7 @@ export function HomePage() {
         className="mt-6 w-full max-w-xl"
       >
    {isLoading && (
-    <Card>
+ <Card className="">
   <div className=" px-5 py-4">
     <div
       className="htmlContent"
@@ -147,7 +155,7 @@ export function HomePage() {
         {!isLoading && (
   <div>
     {/* <div className="bg-gray-100 rounded-lg shadow px-5 py-4"> */}
-  <Card>
+  <Card className="">
     <div className="p-8">
     <Test content={completion} />
     </div>
