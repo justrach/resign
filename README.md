@@ -1,36 +1,21 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# [resign.lol](https://www.resign.lol/)
 
-## Getting Started
+This platform crafts resignation letters for you utilizing AI.
 
-First, run the development server:
+[![Resignation Letter Generator](./public/screenshot.png)](https://www.resign.lol)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## How it works
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The service leverages [GPT-3.5-Turbo](https://openai.com/api/) with streaming technology to produce personalized resignation letters. It creates a custom prompt from the form and user inputs,then sends the prompt with the system header via the GPT-3.5 API through OpenAI, streaming the crafted letter back to the user.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Setting up Vercel's KV Storage for rate limiting
+Check out the [Vercel KV Storage documentation](https://vercel.com/docs/concepts/edge-network/key-value-storage) to set up KV storage for rate limiting.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Running Locally
 
-## Learn More
+1. Sign up at [OpenAI](https://beta.openai.com/account/api-keys) and insert your API key in `OPENAI_API_KEY` within your `.env` file.
+2. Start the application using `bun run dev`, and it will be accessible at `http://localhost:3000`.
 
-To learn more about Next.js, take a look at the following resources:
+## One-Click Deploy
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## TODO
