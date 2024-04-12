@@ -15,10 +15,10 @@ const libre = Rye({
 const inter = Inter({ subsets: ["latin"] });
 
 let title = 'Write your resignation letters fast';
-let description = 'Get insights on your PDFs, reduce your workload, and get more done!';
-let ogimage = 'https://rachit.ai/bot-icon.png';
-let url = 'https://rachit.ai';
-let sitename = 'rachit.ai';
+let description = 'Create resignation letters with AI 🤖';
+let ogimage = 'https://resign.lol/resign.png';
+let url = 'https://resign.lol';
+let sitename = 'resign.lol';
 // lamo this is stupid
 export const metadata: Metadata = {
    keywords :[
