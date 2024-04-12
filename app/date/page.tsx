@@ -20,7 +20,7 @@ export default function DatePickerDemo() {
     <Popover>
       <PopoverTrigger asChild>
         <Button
-          variant={"outline"}
+          // variant={"outline"}
           className={cn(
             "w-[240px] justify-start text-left font-normal",
             !date && "text-muted-foreground"

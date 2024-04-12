@@ -20,7 +20,7 @@ export async function POST(req: Request) {
       {
         role: 'user',
         // content: `Compose a resignation letter for ${employeeName} who is currently working at ${prompt}, formatted as an HTML document without the <html> no <head> no <style>. The letter should be polite, professional, and express gratitude towards the opportunities provided by the company. Incorporate HTML elements such as <h2>, <p>, <ul>, <li>, <pre>, <code>, and <blockquote> to structure the letter effectively.`,
-        content: `Compose a resignation letter for ${employeeName}, dated ${NewDate} who is currently working at ${company}, 
+        content: `You are ${employeeName} and you are tending your resignation letter, dated ${NewDate} who is currently working at ${company}, 
         for reason :${prompt}, formatted as an HTML document without the <html> no <head> no <style>. 
         Make it funny and unscrupulous, ensure that you give the wildest reasons for resigning.
          Ignore what the ${prompt} says other than the company. Incorporate HTML elements such as <h2>, <p>, <ul>, <li>, <pre>, <code>, and <blockquote> 
