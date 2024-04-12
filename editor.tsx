@@ -9,12 +9,12 @@ export default function Editor({content}: {content: string}) {
   // Creates a new editor instance.
   const editor = useCreateBlockNote();
  
-  useEffect(() => {
-    if (editor && content) {
-      // Assume `setContent` is the method to update BlockNoteView's content
-      editor.setContent(content);
-    }
-  }, [editor, content]);
+//   useEffect(() => {
+//     if (editor && content) {
+//       // Assume `setContent` is the method to update BlockNoteView's content
+//       editor.setContent(content);
+//     }
+//   }, [editor, content]);
 
   return <BlockNoteView editor={editor} />;
 }
