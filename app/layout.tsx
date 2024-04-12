@@ -82,7 +82,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={libre.className+"bg-white"}>
+      <body className={libre.className}>
         <ScreenSize />
         {children}</body>
     </html>

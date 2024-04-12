@@ -79,20 +79,20 @@ export function HomePage() {
         <div className="flex flex-col md:flex-row justify-between space-y-4 md:space-y-0 md:space-x-4">
   <div className="space-y-2 w-full md:w-1/3">
     <Label htmlFor="date">Date</Label>
-    <Popover>
+          <Popover>
       <PopoverTrigger asChild>
         <Button
-          variant="noShadow"
+          variant={"outline"}
           className={cn(
-            'w-[280px] justify-start text-left font-bold',
-            !date && 'text-muted-foreground',
+            "w-[240px] justify-start text-left font-normal",
+            !date && "text-muted-foreground"
           )}
         >
           <CalendarIcon className="mr-2 h-4 w-4" />
-          {date ? format(date, 'PPP') : <span>Pick a date</span>}
+          {date ? format(date, "PPP") : <span>Resignation Date</span>}
         </Button>
       </PopoverTrigger>
-      <PopoverContent className="w-auto !border-0 p-0">
+      <PopoverContent className="w-auto p-0" align="start">
         <Calendar
           mode="single"
           selected={date}
