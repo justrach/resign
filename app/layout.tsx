@@ -84,7 +84,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={libre.className}>
-        <ScreenSize />
+        {/* <ScreenSize /> */}
         {children}</body>
     </html>
   );
